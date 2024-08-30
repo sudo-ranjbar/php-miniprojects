@@ -1,0 +1,10 @@
+page_size = 10
+
+n = page_number 
+
+(start , start + page_size)
+
+start = (n-1) * page_size
+
+0 - 9
+10 - 19

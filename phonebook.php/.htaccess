@@ -1,0 +1,12 @@
+<IfModule mod_rewrite.c>
+    Options -Multiviews
+    RewriteEngine on
+    RewriteBase /phonebook
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ /index.php?path=$1 [NC,L,QSA]
+</IfModule>
+
+
+
+

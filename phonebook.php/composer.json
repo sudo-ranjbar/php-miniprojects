@@ -1,0 +1,21 @@
+{
+    "name": "amir/phonebook",
+    "authors": [
+        {
+            "name": "Amir Ranjbar",
+            "email": "amircoder1400@gmail.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.6.1",
+        "hisorange/browser-detect": "^5.0.3",
+        "ext-pdo": "*",
+        "catfan/medoo": "^2.1.12",
+        "fakerphp/faker": "^1.23"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "App/"
+        }
+    }
+}
