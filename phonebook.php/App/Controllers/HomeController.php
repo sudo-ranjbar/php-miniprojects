@@ -36,13 +36,3 @@ class HomeController
         view('home.index', ['contacts' => $contacts, 'N' => $total_number_of_data, 'M' => $number_of_pages]);
     }
 }
-
-// $faker = \Faker\Factory::create();
-// for ($i = 0; $i < 1000; $i++) {
-//     $this->contactModel->create([
-//         'first_name' => $faker->name(),
-//         'last_name' => $faker->name(),
-//         'email' => $faker->email(),
-//         'number' => $faker->phoneNumber()
-//     ]);
-// }

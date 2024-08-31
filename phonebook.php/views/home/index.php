@@ -20,7 +20,9 @@ $s = (isset($_GET['s'])) ? $_GET['s'] : '';
         <div class="col-12 col-sm-12 col-md-3">
             <div class="mb-3 mt-3">
                 <div>
-                    <h1 class="mb-3">Phone Book</h1>
+                    <a href="<?= ($_ENV['HOST']) ?>">
+                        <h1 class="mb-3 text-primary">Phone Book</h1>
+                    </a>
                 </div>
             </div>
 
@@ -33,7 +35,7 @@ $s = (isset($_GET['s'])) ? $_GET['s'] : '';
                 </span>
             </form>
 
-            <form class="row row-cols-1 g-2" method="POST" action="#">
+            <form class="row row-cols-1 g-2" method="POST" action="<?= ($_ENV['HOST']) . 'contact/add' ?>">
                 <div class="col">
                     <label for="FirstName" class="form-label">FirstName:</label>
                     <input type="text" name="fname" class="form-control" id="FirstName">
@@ -94,7 +96,7 @@ $s = (isset($_GET['s'])) ? $_GET['s'] : '';
                     </div>
                 </span>
 
-                <?php if (isset($s)) : ?>
+                <?php if (!empty($s)) : ?>
                     <h2>Search Results for <span class="text-warning"><?= $s ?></span> :</h2>
                 <?php endif ?>
 

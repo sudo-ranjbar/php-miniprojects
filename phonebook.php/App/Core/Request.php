@@ -7,6 +7,7 @@ use JetBrains\PhpStorm\NoReturn;
 
 class Request
 {
+    private array $params;
     private array $route_params;
     private mixed $method;
     private mixed $ip;
@@ -17,6 +18,7 @@ class Request
         foreach ($_REQUEST as $key => $value) {
             $_REQUEST[$key] = xss_clean($value);
         }
+        $this->params = $_REQUEST;
         $this->method = $_SERVER['REQUEST_METHOD'];
         $this->ip = $_SERVER['REMOTE_ADDR'];
         $this->agent = $_SERVER['HTTP_USER_AGENT'];
@@ -51,6 +53,11 @@ class Request
     public function getAgent()
     {
         return $this->agent;
+    }
+
+    public function input($key)
+    {
+        return $this->params[$key] ?? null;
     }
 
 }

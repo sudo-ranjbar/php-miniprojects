@@ -1,8 +1,11 @@
 <?php
 
+include "bootstrap/init.php";
 use App\Core\Routing\Router;
 
-include "bootstrap/init.php";
+
+
+
 
 
 
